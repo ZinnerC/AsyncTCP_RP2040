@@ -47,34 +47,37 @@
 #ifndef ASYNCTCP_RP2040W_H_
 #define ASYNCTCP_RP2040W_H_
 
-/////////////////////////////////////////////
+// TODO: Remove all traces of "W" and make it work with wired options
 
-#if ( defined(ARDUINO_RASPBERRY_PI_PICO_W) )
+// CAZ REMOVE FOR W5100s
+// /////////////////////////////////////////////
+
+// #if ( defined(ARDUINO_RASPBERRY_PI_PICO_W) )
       
-  #if (_ASYNCTCP_RP2040W_LOGLEVEL_ > 2)
-    #if defined(ARDUINO_RASPBERRY_PI_PICO_W)
-      #warning RASPBERRY_PI_PICO_W board using CYW4343 WiFi selected
-    #else
-      #warning RP2040-based board selected
-    #endif
-  #endif
+//   #if (_ASYNCTCP_RP2040W_LOGLEVEL_ > 2)
+//     #if defined(ARDUINO_RASPBERRY_PI_PICO_W)
+//       #warning RASPBERRY_PI_PICO_W board using CYW4343 WiFi selected
+//     #else
+//       #warning RP2040-based board selected
+//     #endif
+//   #endif
 
-  #if defined(WIFI_USE_RP2040)
-    #undef WIFI_USE_RP2040
-  #endif
-  #define WIFI_USE_RP2040      true
+//   #if defined(WIFI_USE_RP2040)
+//     #undef WIFI_USE_RP2040
+//   #endif
+//   #define WIFI_USE_RP2040      true
   
-  #if (_ASYNCTCP_RP2040W_LOGLEVEL_ > 2)
-    #warning Use RP2040 architecture from WiFiWebServer
-  #endif
+//   #if (_ASYNCTCP_RP2040W_LOGLEVEL_ > 2)
+//     #warning Use RP2040 architecture from WiFiWebServer
+//   #endif
 
-#else
+// #else
 
-  #error For RASPBERRY_PI_PICO_W board using CYW43439 WiFi only
+//   #error For RASPBERRY_PI_PICO_W board using CYW43439 WiFi only
     
-#endif
+// #endif
 
-/////////////////////////////////////////////
+// /////////////////////////////////////////////
 
 #include "Arduino.h"
 
